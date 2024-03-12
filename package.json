@@ -1,6 +1,6 @@
 {
   "name": "meorphis-test-28-st1ky2",
-  "version": "0.0.1-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "The official TypeScript library for the Meorphis Test 28 St1ky2 API",
   "author": "Meorphis Test 28 St1ky2 <support@acme.com>",
   "types": "dist/index.d.ts",
