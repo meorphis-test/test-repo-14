@@ -1,4 +1,4 @@
-# Meorphis Test 28 St1ky2 Node API Library
+# Meorphis Test 28 St1ky2 Node API Library :D
 
 [![NPM version](https://img.shields.io/npm/v/meorphis-test-28-st1ky2.svg)](https://npmjs.org/package/meorphis-test-28-st1ky2)
 
