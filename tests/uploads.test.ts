@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { toFile, type ResponseLike } from 'meorphis-test-29-to1nbv/uploads';
-import { File } from 'meorphis-test-29-to1nbv/_shims/index';
+import { toFile, type ResponseLike } from 'meorphis-test-28-st1ky2/uploads';
+import { File } from 'meorphis-test-28-st1ky2/_shims/index';
 
 class MyClass {
   name: string = 'foo';

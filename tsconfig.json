@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "meorphis-test-29-to1nbv/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "meorphis-test-29-to1nbv/*": ["src/*"],
-      "meorphis-test-29-to1nbv": ["src/index.ts"],
+      "meorphis-test-28-st1ky2/_shims/auto/*": ["src/_shims/auto/*-node"],
+      "meorphis-test-28-st1ky2/*": ["src/*"],
+      "meorphis-test-28-st1ky2": ["src/index.ts"],
       "digest-fetch": ["./typings/digest-fetch"]
     },
     "noEmit": true,

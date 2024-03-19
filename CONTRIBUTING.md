@@ -42,25 +42,25 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```bash
-npm install git+ssh://git@github.com:meorphis-test/test-repo-15.git
+npm install git+ssh://git@github.com:meorphis-test/test-repo-14.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```bash
 # Clone
-git clone https://www.github.com/meorphis-test/test-repo-15
-cd test-repo-15
+git clone https://www.github.com/meorphis-test/test-repo-14
+cd test-repo-14
 
 # With yarn
 yarn link
 cd ../my-package
-yarn link meorphis-test-29-to1nbv
+yarn link meorphis-test-28-st1ky2
 
 # With pnpm
 pnpm link --global
 cd ../my-package
-pnpm link -—global meorphis-test-29-to1nbv
+pnpm link -—global meorphis-test-28-st1ky2
 ```
 
 ## Running tests
@@ -68,7 +68,7 @@ pnpm link -—global meorphis-test-29-to1nbv
 Most tests require you to [set up a mock server](https://github.com/stoplightio/prism) against the OpenAPI spec to run the tests.
 
 ```bash
-npx prism path/to/your/openapi.yml
+npx prism mock path/to/your/openapi.yml
 ```
 
 ```bash
@@ -99,7 +99,7 @@ the changes aren't made through the automated pipeline, you may want to make rel
 
 ### Publish with a GitHub workflow
 
-You can release to package managers by using [the `Publish NPM` GitHub action](https://www.github.com/meorphis-test/test-repo-15/actions/workflows/publish-npm.yml). This requires a setup organization or repository secret to be set up.
+You can release to package managers by using [the `Publish NPM` GitHub action](https://www.github.com/meorphis-test/test-repo-14/actions/workflows/publish-npm.yml). This requires a setup organization or repository secret to be set up.
 
 ### Publish manually
 

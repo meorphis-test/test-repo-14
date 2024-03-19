@@ -1,10 +1,10 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { castToError, Headers } from './core';
 
-export class MeorphisTest29To1nbvError extends Error {}
+export class MeorphisTest28St1ky2Error extends Error {}
 
-export class APIError extends MeorphisTest29To1nbvError {
+export class APIError extends MeorphisTest28St1ky2Error {
   readonly status: number | undefined;
   readonly headers: Headers | undefined;
   readonly error: Object | undefined;

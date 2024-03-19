@@ -1,10 +1,10 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import * as Core from './core';
 import * as Errors from './error';
 import { type Agent } from './_shims/index';
 import * as Uploads from './uploads';
-import * as API from 'meorphis-test-29-to1nbv/resources/index';
+import * as API from 'meorphis-test-28-st1ky2/resources/index';
 
 const environments = {
   production: 'https://api.acme.com/v1',
@@ -13,11 +13,6 @@ const environments = {
 type Environment = keyof typeof environments;
 
 export interface ClientOptions {
-  /**
-   * Defaults to process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'].
-   */
-  apiKey?: string | undefined;
-
   /**
    * Specifies the environment to use for the API.
    *
@@ -30,7 +25,7 @@ export interface ClientOptions {
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
-   * Defaults to process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'].
+   * Defaults to process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'].
    */
   baseURL?: string | null | undefined;
 
@@ -84,18 +79,15 @@ export interface ClientOptions {
   defaultQuery?: Core.DefaultQuery;
 }
 
-/** API Client for interfacing with the Meorphis Test 29 To1nbv API. */
-export class MeorphisTest29To1nbv extends Core.APIClient {
-  apiKey: string;
-
+/** API Client for interfacing with the Meorphis Test 28 St1ky2 API. */
+export class MeorphisTest28St1ky2 extends Core.APIClient {
   private _options: ClientOptions;
 
   /**
-   * API Client for interfacing with the Meorphis Test 29 To1nbv API.
+   * API Client for interfacing with the Meorphis Test 28 St1ky2 API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'] ?? undefined]
    * @param {Environment} [opts.environment=production] - Specifies the environment URL to use for the API.
-   * @param {string} [opts.baseURL=process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] ?? https://api.acme.com/v1] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] ?? https://api.acme.com/v1] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -103,27 +95,16 @@ export class MeorphisTest29To1nbv extends Core.APIClient {
    * @param {Core.Headers} opts.defaultHeaders - Default headers to include with every request to the API.
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
-  constructor({
-    baseURL = Core.readEnv('MEORPHIS_TEST_29_TO1NBV_BASE_URL'),
-    apiKey = Core.readEnv('MEORPHIS_TEST_29_TO1NBV_API_KEY'),
-    ...opts
-  }: ClientOptions = {}) {
-    if (apiKey === undefined) {
-      throw new Errors.MeorphisTest29To1nbvError(
-        "The MEORPHIS_TEST_29_TO1NBV_API_KEY environment variable is missing or empty; either provide it, or instantiate the MeorphisTest29To1nbv client with an apiKey option, like new MeorphisTest29To1nbv({ apiKey: 'My API Key' }).",
-      );
-    }
-
+  constructor({ baseURL = Core.readEnv('MEORPHIS_TEST_28_ST1KY2_BASE_URL'), ...opts }: ClientOptions = {}) {
     const options: ClientOptions = {
-      apiKey,
       ...opts,
       baseURL,
       environment: opts.environment ?? 'production',
     };
 
     if (baseURL && opts.environment) {
-      throw new Errors.MeorphisTest29To1nbvError(
-        'Ambiguous URL; The `baseURL` option (or MEORPHIS_TEST_29_TO1NBV_BASE_URL env var) and the `environment` option are given. If you want to use the environment you must pass baseURL: null',
+      throw new Errors.MeorphisTest28St1ky2Error(
+        'Ambiguous URL; The `baseURL` option (or MEORPHIS_TEST_28_ST1KY2_BASE_URL env var) and the `environment` option are given. If you want to use the environment you must pass baseURL: null',
       );
     }
 
@@ -135,8 +116,6 @@ export class MeorphisTest29To1nbv extends Core.APIClient {
       fetch: options.fetch,
     });
     this._options = options;
-
-    this.apiKey = apiKey;
   }
 
   accounts: API.Accounts = new API.Accounts(this);
@@ -154,13 +133,9 @@ export class MeorphisTest29To1nbv extends Core.APIClient {
     };
   }
 
-  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
-    return { Authorization: this.apiKey };
-  }
+  static MeorphisTest28St1ky2 = this;
 
-  static MeorphisTest29To1nbv = this;
-
-  static MeorphisTest29To1nbvError = Errors.MeorphisTest29To1nbvError;
+  static MeorphisTest28St1ky2Error = Errors.MeorphisTest28St1ky2Error;
   static APIError = Errors.APIError;
   static APIConnectionError = Errors.APIConnectionError;
   static APIConnectionTimeoutError = Errors.APIConnectionTimeoutError;
@@ -176,7 +151,7 @@ export class MeorphisTest29To1nbv extends Core.APIClient {
 }
 
 export const {
-  MeorphisTest29To1nbvError,
+  MeorphisTest28St1ky2Error,
   APIError,
   APIConnectionError,
   APIConnectionTimeoutError,
@@ -194,7 +169,7 @@ export const {
 export import toFile = Uploads.toFile;
 export import fileFromPath = Uploads.fileFromPath;
 
-export namespace MeorphisTest29To1nbv {
+export namespace MeorphisTest28St1ky2 {
   // Helper functions
   export import toFile = Uploads.toFile;
   export import fileFromPath = Uploads.fileFromPath;
@@ -207,6 +182,7 @@ export namespace MeorphisTest29To1nbv {
 
   export import Cards = API.Cards;
   export import Card = API.Card;
+  export import FinancialTransaction = API.FinancialTransaction;
   export import CardProvisionResponse = API.CardProvisionResponse;
   export import CardCreateParams = API.CardCreateParams;
   export import CardUpdateParams = API.CardUpdateParams;
@@ -216,4 +192,4 @@ export namespace MeorphisTest29To1nbv {
   export import StatusRetrieveResponse = API.StatusRetrieveResponse;
 }
 
-export default MeorphisTest29To1nbv;
+export default MeorphisTest28St1ky2;

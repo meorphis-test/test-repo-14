@@ -1,16 +1,15 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 import { Response } from 'node-fetch';
 
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
-  apiKey: 'My API Key',
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource financialTransactions', () => {
   test('retrieve', async () => {
-    const responsePromise = meorphisTest29To1nbv.cards.financialTransactions.retrieve(
+    const responsePromise = meorphisTest28St1ky2.cards.financialTransactions.retrieve(
       '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
     );
@@ -26,11 +25,11 @@ describe('resource financialTransactions', () => {
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      meorphisTest29To1nbv.cards.financialTransactions.retrieve(
+      meorphisTest28St1ky2.cards.financialTransactions.retrieve(
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
         { path: '/_stainless_unknown_path' },
       ),
-    ).rejects.toThrow(MeorphisTest29To1nbv.NotFoundError);
+    ).rejects.toThrow(MeorphisTest28St1ky2.NotFoundError);
   });
 });
