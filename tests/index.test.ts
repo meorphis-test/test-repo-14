@@ -1,8 +1,8 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
-import { APIUserAbortError } from 'meorphis-test-29-to1nbv';
-import { Headers } from 'meorphis-test-29-to1nbv/core';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
+import { APIUserAbortError } from 'meorphis-test-28-st1ky2';
+import { Headers } from 'meorphis-test-28-st1ky2/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {
@@ -20,10 +20,9 @@ describe('instantiate client', () => {
   });
 
   describe('defaultHeaders', () => {
-    const client = new MeorphisTest29To1nbv({
+    const client = new MeorphisTest28St1ky2({
       baseURL: 'http://localhost:5000/',
       defaultHeaders: { 'X-My-Default-Header': '2' },
-      apiKey: 'My API Key',
     });
 
     test('they are used in the request', () => {
@@ -52,37 +51,33 @@ describe('instantiate client', () => {
 
   describe('defaultQuery', () => {
     test('with null query params given', () => {
-      const client = new MeorphisTest29To1nbv({
+      const client = new MeorphisTest28St1ky2({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo' },
-        apiKey: 'My API Key',
       });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo');
     });
 
     test('multiple default query params', () => {
-      const client = new MeorphisTest29To1nbv({
+      const client = new MeorphisTest28St1ky2({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo', hello: 'world' },
-        apiKey: 'My API Key',
       });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo&hello=world');
     });
 
     test('overriding with `undefined`', () => {
-      const client = new MeorphisTest29To1nbv({
+      const client = new MeorphisTest28St1ky2({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { hello: 'world' },
-        apiKey: 'My API Key',
       });
       expect(client.buildURL('/foo', { hello: undefined })).toEqual('http://localhost:5000/foo');
     });
   });
 
   test('custom fetch', async () => {
-    const client = new MeorphisTest29To1nbv({
+    const client = new MeorphisTest28St1ky2({
       baseURL: 'http://localhost:5000/',
-      apiKey: 'My API Key',
       fetch: (url) => {
         return Promise.resolve(
           new Response(JSON.stringify({ url, custom: true }), {
@@ -97,9 +92,8 @@ describe('instantiate client', () => {
   });
 
   test('custom signal', async () => {
-    const client = new MeorphisTest29To1nbv({
+    const client = new MeorphisTest28St1ky2({
       baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-      apiKey: 'My API Key',
       fetch: (...args) => {
         return new Promise((resolve, reject) =>
           setTimeout(
@@ -124,92 +118,68 @@ describe('instantiate client', () => {
 
   describe('baseUrl', () => {
     test('trailing slash', () => {
-      const client = new MeorphisTest29To1nbv({
-        baseURL: 'http://localhost:5000/custom/path/',
-        apiKey: 'My API Key',
-      });
+      const client = new MeorphisTest28St1ky2({ baseURL: 'http://localhost:5000/custom/path/' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
     test('no trailing slash', () => {
-      const client = new MeorphisTest29To1nbv({
-        baseURL: 'http://localhost:5000/custom/path',
-        apiKey: 'My API Key',
-      });
+      const client = new MeorphisTest28St1ky2({ baseURL: 'http://localhost:5000/custom/path' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
     afterEach(() => {
-      process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] = undefined;
+      process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] = undefined;
     });
 
     test('explicit option', () => {
-      const client = new MeorphisTest29To1nbv({ baseURL: 'https://example.com', apiKey: 'My API Key' });
+      const client = new MeorphisTest28St1ky2({ baseURL: 'https://example.com' });
       expect(client.baseURL).toEqual('https://example.com');
     });
 
     test('env variable', () => {
-      process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] = 'https://example.com/from_env';
-      const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
+      process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] = 'https://example.com/from_env';
+      const client = new MeorphisTest28St1ky2({});
       expect(client.baseURL).toEqual('https://example.com/from_env');
     });
 
     test('empty env variable', () => {
-      process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] = ''; // empty
-      const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
+      process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] = ''; // empty
+      const client = new MeorphisTest28St1ky2({});
       expect(client.baseURL).toEqual('https://api.acme.com/v1');
     });
 
     test('blank env variable', () => {
-      process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] = '  '; // blank
-      const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
+      process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] = '  '; // blank
+      const client = new MeorphisTest28St1ky2({});
       expect(client.baseURL).toEqual('https://api.acme.com/v1');
     });
 
     test('env variable with environment', () => {
-      process.env['MEORPHIS_TEST_29_TO1NBV_BASE_URL'] = 'https://example.com/from_env';
+      process.env['MEORPHIS_TEST_28_ST1KY2_BASE_URL'] = 'https://example.com/from_env';
 
       expect(
-        () => new MeorphisTest29To1nbv({ apiKey: 'My API Key', environment: 'production' }),
+        () => new MeorphisTest28St1ky2({ environment: 'production' }),
       ).toThrowErrorMatchingInlineSnapshot(
-        `"Ambiguous URL; The \`baseURL\` option (or MEORPHIS_TEST_29_TO1NBV_BASE_URL env var) and the \`environment\` option are given. If you want to use the environment you must pass baseURL: null"`,
+        `"Ambiguous URL; The \`baseURL\` option (or MEORPHIS_TEST_28_ST1KY2_BASE_URL env var) and the \`environment\` option are given. If you want to use the environment you must pass baseURL: null"`,
       );
 
-      const client = new MeorphisTest29To1nbv({
-        apiKey: 'My API Key',
-        baseURL: null,
-        environment: 'production',
-      });
+      const client = new MeorphisTest28St1ky2({ baseURL: null, environment: 'production' });
       expect(client.baseURL).toEqual('https://api.acme.com/v1');
     });
   });
 
   test('maxRetries option is correctly set', () => {
-    const client = new MeorphisTest29To1nbv({ maxRetries: 4, apiKey: 'My API Key' });
+    const client = new MeorphisTest28St1ky2({ maxRetries: 4 });
     expect(client.maxRetries).toEqual(4);
 
     // default
-    const client2 = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
+    const client2 = new MeorphisTest28St1ky2({});
     expect(client2.maxRetries).toEqual(2);
-  });
-
-  test('with environment variable arguments', () => {
-    // set options via env var
-    process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'] = 'My API Key';
-    const client = new MeorphisTest29To1nbv();
-    expect(client.apiKey).toBe('My API Key');
-  });
-
-  test('with overriden environment variable arguments', () => {
-    // set options via env var
-    process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'] = 'another My API Key';
-    const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
-    expect(client.apiKey).toBe('My API Key');
   });
 });
 
 describe('request building', () => {
-  const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key' });
+  const client = new MeorphisTest28St1ky2({});
 
   describe('Content-Length', () => {
     test('handles multi-byte characters', () => {
@@ -251,7 +221,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key', timeout: 10, fetch: testFetch });
+    const client = new MeorphisTest28St1ky2({ timeout: 10, fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -278,7 +248,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key', fetch: testFetch });
+    const client = new MeorphisTest28St1ky2({ fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -305,7 +275,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new MeorphisTest29To1nbv({ apiKey: 'My API Key', fetch: testFetch });
+    const client = new MeorphisTest28St1ky2({ fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);

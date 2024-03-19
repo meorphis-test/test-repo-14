@@ -4,8 +4,8 @@
 /**
  * Types will get added to this namespace when you import one of the following:
  *
- *   import 'meorphis-test-29-to1nbv/shims/node'
- *   import 'meorphis-test-29-to1nbv/shims/web'
+ *   import 'meorphis-test-28-st1ky2/shims/node'
+ *   import 'meorphis-test-28-st1ky2/shims/web'
  *
  * Importing more than one will cause type and runtime errors.
  */

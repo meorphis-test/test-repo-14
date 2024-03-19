@@ -1,8 +1,9 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export { AccountConfiguration, AccountUpdateParams, Accounts } from './accounts/accounts';
 export {
   Card,
+  FinancialTransaction,
   CardProvisionResponse,
   CardCreateParams,
   CardUpdateParams,

@@ -1,15 +1,15 @@
-# Meorphis Test 29 To1nbv Node API Library
+# Meorphis Test 28 St1ky2 Node API Library
 
-[![NPM version](https://img.shields.io/npm/v/meorphis-test-29-to1nbv.svg)](https://npmjs.org/package/meorphis-test-29-to1nbv)
+[![NPM version](https://img.shields.io/npm/v/meorphis-test-28-st1ky2.svg)](https://npmjs.org/package/meorphis-test-28-st1ky2)
 
-This library provides convenient access to the Meorphis Test 29 To1nbv REST API from server-side TypeScript or JavaScript.
+This library provides convenient access to the Meorphis Test 28 St1ky2 REST API from server-side TypeScript or JavaScript.
 
-The REST API documentation can be found [on docs4.meorphis-test-29-to1nbv.com](https://docs4.meorphis-test-29-to1nbv.com). The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found [on docs.meorphis.com](https://docs.meorphis.com). The full API of this library can be found in [api.md](api.md).
 
 ## Installation
 
 ```sh
-npm install meorphis-test-29-to1nbv
+npm install meorphis-test-28-st1ky2
 ```
 
 ## Usage
@@ -18,15 +18,14 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
-  apiKey: process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'], // This is the default and can be omitted
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   environment: 'environment_1', // defaults to 'production'
 });
 
 async function main() {
-  const statusRetrieveResponse = await meorphisTest29To1nbv.status.retrieve();
+  const statusRetrieveResponse = await meorphisTest28St1ky2.status.retrieve();
 
   console.log(statusRetrieveResponse.message);
 }
@@ -40,16 +39,15 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
-  apiKey: process.env['MEORPHIS_TEST_29_TO1NBV_API_KEY'], // This is the default and can be omitted
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   environment: 'environment_1', // defaults to 'production'
 });
 
 async function main() {
-  const statusRetrieveResponse: MeorphisTest29To1nbv.StatusRetrieveResponse =
-    await meorphisTest29To1nbv.status.retrieve();
+  const statusRetrieveResponse: MeorphisTest28St1ky2.StatusRetrieveResponse =
+    await meorphisTest28St1ky2.status.retrieve();
 }
 
 main();
@@ -66,8 +64,8 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const statusRetrieveResponse = await meorphisTest29To1nbv.status.retrieve().catch(async (err) => {
-    if (err instanceof MeorphisTest29To1nbv.APIError) {
+  const statusRetrieveResponse = await meorphisTest28St1ky2.status.retrieve().catch(async (err) => {
+    if (err instanceof MeorphisTest28St1ky2.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
       console.log(err.headers); // {server: 'nginx', ...}
@@ -104,12 +102,12 @@ You can use the `maxRetries` option to configure or disable this:
 <!-- prettier-ignore -->
 ```js
 // Configure the default for all requests:
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   maxRetries: 0, // default is 2
 });
 
 // Or, configure per-request:
-await meorphisTest29To1nbv.status.retrieve({
+await meorphisTest28St1ky2.status.retrieve({
   maxRetries: 5,
 });
 ```
@@ -121,12 +119,12 @@ Requests time out after 1 minute by default. You can configure this with a `time
 <!-- prettier-ignore -->
 ```ts
 // Configure the default for all requests:
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
 });
 
 // Override per-request:
-await meorphisTest29To1nbv.status.retrieve({
+await meorphisTest28St1ky2.status.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -145,13 +143,13 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 
 <!-- prettier-ignore -->
 ```ts
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv();
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2();
 
-const response = await meorphisTest29To1nbv.status.retrieve().asResponse();
+const response = await meorphisTest28St1ky2.status.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: statusRetrieveResponse, response: raw } = await meorphisTest29To1nbv.status
+const { data: statusRetrieveResponse, response: raw } = await meorphisTest28St1ky2.status
   .retrieve()
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
@@ -164,26 +162,26 @@ By default, this library uses `node-fetch` in Node, and expects a global `fetch`
 
 If you would prefer to use a global, web-standards-compliant `fetch` function even in a Node environment,
 (for example, if you are running Node with `--experimental-fetch` or using NextJS which polyfills with `undici`),
-add the following import before your first import `from "MeorphisTest29To1nbv"`:
+add the following import before your first import `from "MeorphisTest28St1ky2"`:
 
 ```ts
 // Tell TypeScript and the package to use the global web fetch instead of node-fetch.
 // Note, despite the name, this does not add any polyfills, but expects them to be provided if needed.
-import 'meorphis-test-29-to1nbv/shims/web';
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import 'meorphis-test-28-st1ky2/shims/web';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 ```
 
-To do the inverse, add `import "meorphis-test-29-to1nbv/shims/node"` (which does import polyfills).
-This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/meorphis-test/test-repo-15/tree/main/src/_shims#readme)).
+To do the inverse, add `import "meorphis-test-28-st1ky2/shims/node"` (which does import polyfills).
+This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/meorphis-test/test-repo-14/tree/test-branch/src/_shims#readme)).
 
 You may also provide a custom `fetch` function when instantiating the client,
 which can be used to inspect or alter the `Request` or `Response` before/after each request:
 
 ```ts
 import { fetch } from 'undici'; // as one example
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 
-const client = new MeorphisTest29To1nbv({
+const client = new MeorphisTest28St1ky2({
   fetch: async (url: RequestInfo, init?: RequestInit): Promise<Response> => {
     console.log('About to make a request', url, init);
     const response = await fetch(url, init);
@@ -208,12 +206,12 @@ import http from 'http';
 import { HttpsProxyAgent } from 'https-proxy-agent';
 
 // Configure the default for all requests:
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   httpAgent: new HttpsProxyAgent(process.env.PROXY_URL),
 });
 
 // Override per-request:
-await meorphisTest29To1nbv.status.retrieve({
+await meorphisTest28St1ky2.status.retrieve({
   httpAgent: new http.Agent({ keepAlive: false }),
 });
 ```
@@ -228,7 +226,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/meorphis-test/test-repo-15/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/meorphis-test/test-repo-14/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
@@ -237,7 +235,7 @@ TypeScript >= 4.5 is supported.
 The following runtimes are supported:
 
 - Node.js 18 LTS or later ([non-EOL](https://endoflife.date/nodejs)) versions.
-- Deno v1.28.0 or higher, using `import MeorphisTest29To1nbv from "npm:meorphis-test-29-to1nbv"`.
+- Deno v1.28.0 or higher, using `import MeorphisTest28St1ky2 from "npm:meorphis-test-28-st1ky2"`.
 - Bun 1.0 or later.
 - Cloudflare Workers.
 - Vercel Edge Runtime.

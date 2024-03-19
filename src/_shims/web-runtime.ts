@@ -9,9 +9,9 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
   const recommendation =
     manuallyImported ?
       `You may need to use polyfills`
-    : `Add one of these imports before your first \`import … from 'meorphis-test-29-to1nbv'\`:
-- \`import 'meorphis-test-29-to1nbv/shims/node'\` (if you're running on Node)
-- \`import 'meorphis-test-29-to1nbv/shims/web'\` (otherwise)
+    : `Add one of these imports before your first \`import … from 'meorphis-test-28-st1ky2'\`:
+- \`import 'meorphis-test-28-st1ky2/shims/node'\` (if you're running on Node)
+- \`import 'meorphis-test-28-st1ky2/shims/web'\` (otherwise)
 `;
 
   let _fetch, _Request, _Response, _Headers;
@@ -95,7 +95,7 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
     getDefaultAgent: (url: string) => undefined,
     fileFromPath: () => {
       throw new Error(
-        'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/meorphis-test/test-repo-15#file-uploads',
+        'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/meorphis-test/test-repo-14#file-uploads',
       );
     },
     isFsReadStream: (value: any) => false,

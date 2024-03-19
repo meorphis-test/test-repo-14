@@ -1,16 +1,15 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import MeorphisTest29To1nbv from 'meorphis-test-29-to1nbv';
+import MeorphisTest28St1ky2 from 'meorphis-test-28-st1ky2';
 import { Response } from 'node-fetch';
 
-const meorphisTest29To1nbv = new MeorphisTest29To1nbv({
-  apiKey: 'My API Key',
+const meorphisTest28St1ky2 = new MeorphisTest28St1ky2({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource cards', () => {
   test('create: only required params', async () => {
-    const responsePromise = meorphisTest29To1nbv.cards.create({ type: 'VIRTUAL' });
+    const responsePromise = meorphisTest28St1ky2.cards.create({ type: 'VIRTUAL' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,7 +20,7 @@ describe('resource cards', () => {
   });
 
   test('create: required and optional params', async () => {
-    const response = await meorphisTest29To1nbv.cards.create({
+    const response = await meorphisTest28St1ky2.cards.create({
       type: 'VIRTUAL',
       account_token: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
       card_program_token: '00000000-0000-0000-1000-000000000000',
@@ -54,7 +53,7 @@ describe('resource cards', () => {
   });
 
   test('retrieve', async () => {
-    const responsePromise = meorphisTest29To1nbv.cards.retrieve('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
+    const responsePromise = meorphisTest28St1ky2.cards.retrieve('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -67,14 +66,14 @@ describe('resource cards', () => {
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      meorphisTest29To1nbv.cards.retrieve('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
+      meorphisTest28St1ky2.cards.retrieve('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {
         path: '/_stainless_unknown_path',
       }),
-    ).rejects.toThrow(MeorphisTest29To1nbv.NotFoundError);
+    ).rejects.toThrow(MeorphisTest28St1ky2.NotFoundError);
   });
 
   test('update', async () => {
-    const responsePromise = meorphisTest29To1nbv.cards.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {});
+    const responsePromise = meorphisTest28St1ky2.cards.update('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {});
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -85,7 +84,7 @@ describe('resource cards', () => {
   });
 
   test('provision', async () => {
-    const responsePromise = meorphisTest29To1nbv.cards.provision('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {});
+    const responsePromise = meorphisTest28St1ky2.cards.provision('182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e', {});
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;

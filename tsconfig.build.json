@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "meorphis-test-29-to1nbv/*": ["dist/src/*"],
-      "meorphis-test-29-to1nbv": ["dist/src/index.ts"],
+      "meorphis-test-28-st1ky2/*": ["dist/src/*"],
+      "meorphis-test-28-st1ky2": ["dist/src/index.ts"],
       "digest-fetch": ["./typings/digest-fetch"]
     },
     "noEmit": false,
